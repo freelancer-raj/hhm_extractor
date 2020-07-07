@@ -120,6 +120,7 @@ class WSD(object):
     def disambiguate(self, context, word, all_cases=False):
         begin_index = context.find(word)
         end_index = begin_index + len(word)
+        word = word.replace("<", "").replace(">", "")
         return self._disambiguate(context, word, begin_index, end_index, all_cases)
         
     def _disambiguate(self, text, target, target_start, target_end, all_cases=False):
