@@ -1,1 +1,2 @@
-# TODO: Save L2 related senses as a separate column
+# TODO: Preserve L1 code, but use only direct relation for hypernymy
+#
