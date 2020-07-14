@@ -1,0 +1,28 @@
+Steps to run -
+1. On terminal, navigate to the project root directory and activate the virtual environment for the project by running -
+    conda activate sensegram
+
+    Note that this environment includes all the packages needed for this project and hence needs to be activated before launching the jupyter server.
+
+2. From the same terminal window, start the jupyter server by running -
+    jupyter notebook
+
+3. For the first run, or when running with a new/updated corpus, turn on all flags in the constants cell(cell 3 of the notebook).
+   This will ensure that new sense embeddings and HHM mappings are generated for the updated corpus.
+
+4. From the notebook nav-bar, click the ">>" button to run all cells of the notebook. This will ensure that the entire pipeline of following steps, is run on the corpus -
+    a. Load Sensegram and generate sense embeddings
+    b. Generate sense embeddings for corpus words
+    c. Generate HHM mapping for all words in the corpus
+    d. Generate HHM graph
+
+5. Once the entire run is complete, just change the value of "word" in the last cell, to generate HHM graph for other words.
+
+6. On subsequent runs, disable all flags except load_data, and repeat step 4. This will skip to the last step of the pipeline, and generate HHM graph from pre-calculated data.
+   This ensures that we only do heavy computation once for a corpus.
+
+-- Flag settings --
+ - load_vectors - Turing this on will load the sense vector files to memory. Ensure that this flag is turned on, if you are trying to experiment with the WSD module.
+ - load_data - Flag to indicate whether or not to load data. If you are trying to generate HHM graph, ensure that this flag is turned on.
+ - generate_sense_embeddings - Flag to decide whether or not new sense embeddings should be generated. Switching this on, will re generate sense embeddings using the corpus data. For this to function, vectors need to be loaded to memory.
+ - generate_hypernymy_flag - Flag to decide whether to create new HHM mappings for the data, or load pre-calculated ones from file.
