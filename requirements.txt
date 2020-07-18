@@ -58,7 +58,6 @@ plotly==4.8.2
 preshed==3.0.2
 prometheus-client==0.8.0
 prompt-toolkit==3.0.5
-psutil==5.7.2
 ptyprocess==0.6.0
 Pygments==2.6.1
 pyparsing==2.4.7
