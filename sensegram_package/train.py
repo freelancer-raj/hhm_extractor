@@ -62,6 +62,7 @@ def main():
     vectors_fpath = join(model_dir, corpus_name + ".cbow{}-size{}-window{}-iter{}-mincount{}-bigrams{}.word_vectors".format(
         args.cbow, args.size, args.window, args.iter, args.min_count, args.bigrams))
     vectors_short_fpath = join(model_dir, corpus_name + ".word_vectors")
+    print(vectors_short_fpath)
     neighbours_fpath = join(model_dir, corpus_name + ".N{}.graph".format(args.N))
     clusters_fpath = join(model_dir, corpus_name + ".n{}.clusters".format(args.n))
     clusters_minsize_fpath = clusters_fpath + ".minsize" + str(args.min_size)  # clusters that satisfy min_size

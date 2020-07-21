@@ -4,6 +4,7 @@ nohup.out
 # data
 data/
 output/
+model/
 
 # IDE files
 .idea/
