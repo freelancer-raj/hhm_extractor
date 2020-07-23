@@ -30,7 +30,10 @@ def compute_neighbours(index, w2v, nns_fpath, neighbors=200):
     print("Compute neighbours")
     tic = time()
     with codecs.open(nns_fpath, "w", "utf-8") as output:
+        print("Get syn0norm from w2v")
         X = w2v.syn0norm
+        
+        print("get indices")
         D, I = index.search(X, neighbors + 1)
 
         j = 0
