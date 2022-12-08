@@ -9,7 +9,7 @@ boto==2.49.0
 boto3==1.14.13
 botocore==1.17.13
 catalogue==1.0.0
-certifi==2020.6.20
+certifi==2022.12.7
 chardet==3.0.4
 chinese-whispers==0.7.2
 clint==0.5.1
